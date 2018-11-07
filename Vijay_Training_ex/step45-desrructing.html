@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destructing</title>
+    <script>
+    /*
+    var obj1={
+        val:555
+    }
+    var obj2=obj1;
+    console.log(obj1.val); //555
+    console.log(obj2.val); //555
+    obj2.val=666;
+    console.log("Afetr modifing:"+obj1.val); //666
+    console.log(obj2.val); //666
+    */
+/*
+    var obj1={
+        val:555
+    }
+
+    var  obj2val=obj1.val;
+    console.log(obj2val);
+    console.log(obj1.val);
+    obj2val=777;
+    console.log(obj2val); // value is modified
+    console.log(obj1.val); // value is remain same 
+*/
+
+var obj1={
+val:555,
+company:"HCL TECh"
+}
+let{val:obj2val,company:compname}=obj1;  //Assigning the obj1
+console.log(obj2val,compname);//555
+obj2val=6666;
+console.log(obj2val,compname); //6666 HCL  //Assigning the obj1
+
+let{val,company}=obj1;
+console.log(val,company); //555 HCL
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

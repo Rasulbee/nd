@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation</title>
+    <style>
+    .box
+    {
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        background-color:coral;
+    }
+   /* @keyframes hclframes
+    {
+        from
+        {
+        background-color: coral;
+        box-shadow: 0px 0px 0px transparent;
+        transform: rotate(0deg)
+        }
+       to{
+           background-color: aquamarine;
+           box-shadow: 20px 20px 20px black;
+           transform: rotate(360deg);
+       }
+    }
+    */
+
+     @keyframes hclframes
+    {
+        0%
+        {
+        background-color: coral;
+        box-shadow: 0px 0px 0px transparent;
+        transform: rotate(0deg)
+        }
+       100%{
+           background-color: aquamarine;
+           box-shadow: 20px 20px 20px black;
+           transform: rotate(360deg);
+       }
+    }
+    
+    .box:hover
+    {
+        animation-name: hclframes;
+        animation-duration: 4s;
+        animation-direction: reverse;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

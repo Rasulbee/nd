@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Call Apply Bind</title>
+    <script>
+    var app={
+        getPurchagePrice:function()
+        {
+            return 100;
+        },
+        getSalesPrice:function()
+        {
+//var self=this
+var calculateProfit=function()
+{
+    return this.getPurchagePrice()*.2 //100*0.2 =120
+}
+
+//return calculateProfit.apply(this)+this.getPurchagePrice();//applay is not a function
+//return calculateProfit.call(this)+this.getPurchagePrice(); /// call is not a function
+return calculateProfit.bind(this)()+this.getPurchagePrice();  //bind()is function;
+        }
+    };
+    console.log(app.getSalesPrice()); //120
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

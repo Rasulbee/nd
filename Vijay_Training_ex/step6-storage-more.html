@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+   window.addEventListener("storage",storageFun);
+    function storeHandler()
+    {
+        var user={
+            name:document.getElementById('un').value,
+          age:document.getElementById('ua').value,
+         email:document.getElementById('ue').value,
+    }
+    localStorage.setItem('user',JSON.stringify(user));
+    };
+    function storageFun()
+    {
+        console.log("storage  accessed");
+    }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" id="un">
+            </td>
+        </tr>
+        <tr>
+            <td>user age</td>
+            <td><input type="text" id="ua"></td>
+        </tr>
+        <tr>
+            <td>user  email</td>
+            <td><input type="text" id="ue">
+            </td>
+        </tr>
+            <tr>
+                <td>
+                <button id="btn" onclick="storeHandler();">
+                        Store date
+                    </button></td>
+            </tr>
+        
+    </table>
+
+</body>
+</html>

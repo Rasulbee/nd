@@ -1,0 +1,1 @@
+var message="Hi am runnung on typescript";

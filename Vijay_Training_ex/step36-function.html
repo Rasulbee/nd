@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions</title>
+    <script>
+    var batman={
+        fname:"Brucely",
+        lname:"wayen",
+        fullname:function(city,power)
+        {
+           return this.fname+" "+this.lname+" "+city+" "+power;
+        }
+    }
+    var superman={
+        fname:"Super",
+        lname:"man"
+        
+    }
+    var Spiderman={
+        fname:"Spider",
+        lname:"Man"
+    }
+
+/* CALL   ****************/
+    console.log(batman.fullname());
+    console.log("Batman full name is :"+batman.fullname(batman));
+    // this will not work /console.log("spider full name is :"+batman.fullname(Spiderman))
+    console.log("spider man full name is:"+batman.fullname.call(Spiderman));
+    console.log("Super  man full name is:"+batman.fullname.call(superman));
+    console.log("APPALY ===============")
+  console.log(batman.fullname.call(Spiderman,"Bang",10));
+  console.log(batman.fullname.call(superman,"DELHI",40));
+
+/* Appay   ****************/
+console.log("Batman full name is :"+batman.fullname(batman));
+    // this will not work /console.log("spider full name is :"+batman.fullname(Spiderman))
+    console.log("spider man full name is useing Aplly:"+batman.fullname.apply(Spiderman));
+    console.log("Super  man full name is useing Aply:"+batman.fullname.apply(superman));
+
+    console.log("###############Apply")
+console.log("Apply is by arrgument:"+batman.fullname.apply(batman,["BANG",50]));
+console.log("Apply is by arrgument:"+batman.fullname.apply(superman,["DELHI",40]));
+console.log("Apply is by arrgument:"+batman.fullname.apply(Spiderman,["HYD",20]));
+/* Bind   ****************/
+    console.log("Batman full name is :"+batman.fullname(batman));
+    var spiderFun=batman.fullname.bind(Spiderman);
+    var supermanFun=batman.fullname.bind(superman);
+    console.log("spider man full name is useing bind:"+spiderFun());
+    console.log("Super  man full name is useing bind:"+supermanFun());
+
+console.log("####### BIND");
+console.log("BIND useing arguments"+batman.fullname.bind(batman)("BANG",20));
+console.log("BIND useing arguments"+batman.fullname.bind(superman)("BANG",400));
+console.log("BIND useing arguments"+batman.fullname.bind(Spiderman)("BANG",50));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

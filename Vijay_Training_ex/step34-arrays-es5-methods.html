@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES 5</title>
+    <script>
+        /*
+        var arr = [11,9,8,21,5,3,87,2];
+        var arrdouble = [];
+        for(var i = 0; i < arr.length;  i++){
+            arrdouble.push(arr[i]*2)
+        };
+        console.log(arr);
+        console.log("++++++++++++++++++++++");
+        console.log(arrdouble);
+        */
+        /*
+        var arr = [11,9,8,21,5,3,87,2];
+        var arrdouble = [];
+        arr.forEach(function(val, index, array){
+            arrdouble.push(val * 2);
+        })
+        console.log(arr);
+        console.log("++++++++++++++++++++++");
+        console.log(arrdouble);
+        */
+        /*
+        var arr = [11,9,8,21,5,3,87,2];
+        var arrdouble = arr.map(function(val, index, array){
+            return val * 2;
+        })
+        console.log(arr);
+        console.log("++++++++++++++++++++++");
+        console.log(arrdouble);
+        */
+        /*
+        var arr = [11,9,8,21,5,3,87,2];
+        var over10 = arr.filter(function(val, index, array){
+            return val > 10;
+        })
+        console.log(arr);
+        console.log("++++++++++++++++++++++");
+        console.log(over10);
+        */
+        /*
+        var arr = [11,9,8,21,5,3,87,2];
+        var over10 = arr.every(function(val, index, array){
+            return val > 10;
+        })
+        console.log(arr);
+        console.log("++++++++++++++++++++++");
+        console.log(over10);
+        */
+        /*
+        var arr = [11,9,8,21,5,3,87,2];
+        var over10 = arr.some(function(val, index, array){
+            return val > 100;
+        })
+        console.log(arr);
+        console.log("++++++++++++++++++++++");
+        console.log(over10);
+        */
+        var arr = [11,9,8,21,5,3,87,2];
+        var total = arr.reduce(function(init, val, index, array){
+            console.log(val);
+            return init+val;
+        }, 0)
+        console.log(arr);
+        console.log("++++++++++++++++++++++");
+        console.log(total);
+        /*
+        var arr = [11,9,8,21,5,3,87,2];
+        var total = arr.reduceRight(function(init, val, index, array){
+            console.log(val);
+            return init+val;
+        }, 0)
+        console.log(arr);
+        console.log("++++++++++++++++++++++");
+        console.log(total);
+        */
+    </script>   
+</head>
+<body>
+    
+</body>
+</html>

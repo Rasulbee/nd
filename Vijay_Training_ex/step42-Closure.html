@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Closure</title>
+    <script>
+        /*
+     function Hero(fname,lname,cty)
+    {
+        this.firstname=fname;
+        this.lastname=lname;
+        this.city=cty;
+
+        this.fullname=function()
+        {
+            return this.firstname+this.lastname;
+        }
+        return fullname;
+};
+
+var fn=Hero("Bruce","Wayne","Gothem");
+//console.log(fn); // output: ƒ () {  return this.firstname+this+lastname; }
+console.log(fn());
+        */
+ 
+        function randomnumber()
+        {
+            var num=Math.round(Math.random()*100);
+            return function(){  //closure is calling
+                return num;
+            }
+        };
+        var randomnum=randomnumber();
+        console.log(randomnum(),randomnum()); 
+
+/* The bolow exmple is not a Closure
+  function randomnumber()
+        {
+           // var num
+            return function(){  //closure is calling
+                return Math.round(Math.random()*100);
+            }
+        };
+        var randomnum=randomnumber();
+        console.log(randomnum(),randomnum()); //s2 s7
+*/
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

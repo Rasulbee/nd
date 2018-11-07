@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classes </title>
+    <script>
+         class Hero{
+             constructor(fname,lname)
+             {
+                 this.firstname=fname;
+                 this.lastname=lname;
+                 this._secret="Top secret";
+             }
+             /*Method that returns fullname*/
+             fullname()
+             {
+                 return this.firstname+" "+this.lastname;
+             }
+             /*getter and setter
+             */
+             get secret()
+             {
+                 return this._secret;
+             }
+             set secret(newsecret)
+             {
+                 this._secret=newsecret;
+             }
+         };
+         class ComicHero extends Hero
+         {
+             constructor(fname,lname,moives)
+             {
+                 super(fname,lname); /* Super is used for to set the  parent filed from the child */
+                 this.moives=moives;
+             }
+             addMoive(moive)
+             {
+            this.moives.push(moive);
+             }
+             getMoiveCount()
+             {
+                 return this.moives.length;
+             }
+         }
+
+
+        var hero1=new Hero("Peter","Parker");
+        var hero2=new Hero("Kit","Walker");
+
+        console.log(hero1.firstname,hero1.lastname,hero1.fullname(),hero1.secret);
+        console.log(hero2.firstname,hero2.lastname,hero2.fullname());
+
+        console.log("###################");
+        console.log(hero1.secret);
+
+        hero1.secret="protect the bridge"; // we can change the secret property
+        console.log("###################");
+        console.log(hero1.secret);
+
+        var ch=new ComicHero("Bruce","wayne",["batman begin","the dark knight","dark knight"]);
+        console.log("Moives are :"+ch.moives);
+        console.log("get Langth:"+ch.getMoiveCount());
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

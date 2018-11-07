@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+<script>
+/*var arr=[11,9,8,21,3,87];
+var arrdouble=[];
+for(var i=0;i<arr.length;i++)
+{
+    arrdouble.push(arr[i]*2)
+};
+console.log("Array value:"+arr);
+console.log("Double of array:"+arrdouble);
+*/
+
+var heroes=[
+    {title:"Batman",power:7},
+    {title:"Ironman",power:5},
+    {title:"Spiderman",power:9},
+    {title:"Phantom",power:5},
+    {title:"Superman",power:8},
+    {title:"Rajini",power:10},
+    ]
+/*
+//1 for ascending order;
+//-1 for desacnding order;
+//0 for not any
+
+*/
+function heroesFun(a,b)
+{
+    if(a.power < b.power)
+    {
+        return -1
+    }else if(a.power > b.power)
+    {
+        return 1
+    }else{
+        return 0
+    }
+
+};
+
+console.log(heroes.sort(heroesFun));
+</script>
+<body>
+    
+</body>
+</html>

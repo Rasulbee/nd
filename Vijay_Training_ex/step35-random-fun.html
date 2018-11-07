@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Function</title>
+    
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 100px;
+            color: dimgray;
+            background-color: chartreuse;
+            margin: 50px auto;
+        }
+        button{
+            display: block;
+            width: 100px;
+            margin: 10px auto;
+        }
+    </style>
+<script>
+//var arr=[1,2,3,4,5,6];
+function myFunction()
+{
+    document.getElementsByTagName("div")[0].innerHTML=Math.round(Math.random()*6);
+}
+</script>
+</head>
+<body>
+    
+    <button onclick="myFunction()">Click me</button>
+    <div class="box">1</div>
+</body>
+</html>

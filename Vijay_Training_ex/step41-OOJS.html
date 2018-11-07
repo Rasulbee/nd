@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Closure</title>
+    <script>
+    //public properties are created by key word 'this'
+    // this.fname,this.lname 
+
+    function Hero(fname,lname)
+    {
+        this.firstname=fname;
+        this.lastname=lname;
+
+        var secret="top secret"; // private variable created useing 'Var'
+
+        this.getsecret=function()
+        {
+            return secret;
+        }
+        this.setsecret=function(newObject)
+        {
+       return secret=newObject;
+        }
+    };
+
+
+//Any number of object you creating it can access the fullname method
+    Hero.prototype.fullname=function()
+    {
+        return this.fname+this.lname
+    }
+     var hero1=new Hero("Bruce","Wayne");
+     var hero2=new Hero("Clark","kent");
+  hero1.setsecret("Save the Bridge");
+  console.log(hero1.firstname,hero1.lastname,hero1.fullname());
+  console.log(hero1.fullname===hero1.fullname);
+
+console.log("This by useing variable :"+hero2.secret+" by hero1:"+hero1.secret) // output:undefined
+console.log("accessing hero1:"+hero1.getsecret()) // save the object
+  console.log(" acceing hero2:"+hero2.getsecret()) // top secret
+
+
+ Array.prototype.rasul=function()
+ {
+     return this.length;
+ }
+ var arr=[2,1,4,7,9];
+ console.log("Prototype functio call rasul is calling :"+arr.rasul());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    var uname,uage,uemail;
+    function storeHandler()
+    {
+window.localStorage.uname=document.getElementById('un').value;
+window.localStorage.uage=document.getElementById('ua').value;
+window.localStorage.uemail=document.getElementById('ue').value;
+    }
+    function getData()
+    {
+alert("usre name:"+window.localStorage.uname+"Age :"+window.localStorage.uage+"email id:"+window.localStorage.uemail);
+    }
+    function getKeyData()
+    {
+        alert("Key value is:"+localStorage.key(0));
+        alert("key value by get item:"+localStorage.getItem(localStorage.key(0)));
+
+    }
+    function getLength()
+    {
+        alert("total length:"+localStorage.length)
+    }
+    function getList()
+    {
+        for(var i=0;i<localStorage.length;i++)
+        {
+            alert("key value by get item:"+localStorage.getItem(localStorage.key(i))); 
+        }
+    }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" id="un">
+            </td>
+        </tr>
+        <tr>
+            <td>user age</td>
+            <td><input type="text" id="ua"></td>
+        </tr>
+        <tr>
+            <td>user  email</td>
+            <td><input type="text" id="ue">
+            </td>
+        </tr>
+            <tr>
+                <td>
+                <button id="btn" onclick="storeHandler();">
+                        Store date
+                    </button></td>
+            </tr>
+        
+    </table>
+ <button id="sub" onclick="getData();">get data</button>
+ <button id="sub" onclick="getKeyData();">Get Key</button>
+ <button id="sub" onclick="getLength();">Get Length</button>
+ <button onclick="getList()">Get Data</button>
+</body>
+</html>

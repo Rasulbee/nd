@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*
+        tag / element  selector 1
+        class selector          10
+        id    selector          100
+        inline style            1000
+        */
+       html body p[class ^= "box"][id].box.player#hcl:nth-child(2):not(:nth-child(1)){
+           background-color: turquoise;
+       }
+       html body p[class][id].box.player#hcl{
+           background-color: slateblue;
+       }
+       html body p[class].box.player#hcl{
+           background-color: springgreen;
+       }
+       html body p.box.player#hcl{
+           background-color: silver;
+       }
+       body p.box.player#hcl{
+           background-color: brown;
+       }
+       p.box.player#hcl{
+           background-color: blue;
+       }
+       p.box#hcl{
+           background-color: green;
+       }
+       p#hcl{
+           background-color: orange;
+       }
+       #hcl{
+           background-color: yellow;
+       }
+
+    </style>
+</head>
+<body>
+    <p class="box player">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis recusandae odit animi nihil facilis suscipit soluta quos sunt ut ipsa veniam labore, velit explicabo nobis harum voluptates vel accusantium cupiditate?
+    </p>
+    <p class="box player" id="hcl">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis recusandae odit animi nihil facilis suscipit soluta quos sunt ut ipsa veniam labore, velit explicabo nobis harum voluptates vel accusantium cupiditate?
+    </p>
+    <!--
+
+        <div id="box1">
+            <div id="box2">
+                <div id="box3">
+                    <div id="box4">
+                        <div id="box5">
+                            <div id="box6">
+                                <div id="box7">
+                                    <div id="box8">
+                                        <div id="box9">
+                                            <div id="box10">
+                                                <p class="box player" id="hcl" style="background-color:tomato" >
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis recusandae odit animi nihil facilis suscipit soluta quos sunt ut ipsa veniam labore, velit explicabo nobis harum voluptates vel accusantium cupiditate?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    -->
+    </body>
+    </html>

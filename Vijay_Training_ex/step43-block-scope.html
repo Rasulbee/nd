@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    var hero={
+        title:"Batman",
+        power:8
+    }
+    
+    function checkpower()
+    {
+        if(hero.power>7)
+        {
+            //var temptitle=hero.title+" is strong"; with this we can access outside the block also
+            let temptitle=hero.title+" is strong"; //let is block level scopeing we can not access outside the if block
+            hero.title=temptitle;
+            console.log(temptitle); 
+        }
+    };
+    checkpower();
+    console.log("Out side function:"+hero.title);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

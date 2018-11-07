@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+   /* This is in EC5
+    function adder()
+    {
+        let tot=0;
+        for(var i=0;i<arguments.length;i++)
+        {
+            tot+=arguments[i];
+        }
+        return tot;
+    }
+
+    console.log(adder(5));
+    console.log(adder(5,8));
+    console.log(adder(5,9,10));
+    console.log(adder(5,5,8,9));
+   */
+/*This in EC6*/
+   function adder(...nums) // rest of parameter
+    {
+        let tot=0;
+        for(var i=0;i<nums.length;i++)
+        {
+            tot+=nums[i];
+        }
+        return tot;
+    }
+
+    console.log(adder(5));
+    console.log(adder(5,8));
+    console.log(adder(5,9,10));
+    console.log(adder(5,5,8,10));
+
+    var arr=[4,5,6,9];
+    console.log(adder(arr[0],arr[1],arr[2],arr[3])); //24
+    console.log("###########")
+    console.log(adder(...arr)); // spread operator :24
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

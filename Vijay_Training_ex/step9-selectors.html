@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selectors</title>
+    <style>
+        /*
+       img[width]{
+       img[width = "9"]{
+       img[alt $= "man"]{
+       img[alt ^= "captain"]{
+       img[alt *= "r"]{
+           border: 5px solid red;
+       }
+        img:not(:last-child){
+            border: 5px solid red;
+        }
+        img:nth-child(5){
+        img:nth-child(odd){
+        img:nth-child(even){
+        img:nth-child(3n+2){
+        img:nth-child(3n-1){
+        img:nth-of-type(2){
+        img:nth-of-type(odd){
+        */
+        li:nth-last-child(){
+            border: 5px solid red;
+        }
+       
+        p::selection{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic atque soluta debitis obcaecati, iure in, asperiores magnam quaerat eaque facere deserunt nisi id, odit mollitia? Quo ducimus consequuntur sint rem!</p>
+    <li>List Item</li>
+    <li>List Item</li>
+    <li>List Item</li> 
+    <li>List Item</li>
+    <li>List Item</li>
+    <img src="images/heroes/batman.jpg" alt="batman" width="100">
+    <img src="images/heroes/antman.jpg" alt="antman" width="100">
+    <img src="images/heroes/blackpanther.jpg" alt="blackpanther" width="100">
+    <img src="images/heroes/blackwidow.jpg" alt="blackwidow" width="100">
+    <img src="images/heroes/captainamerica.jpg" alt="captainamerica" width="100">
+    <img src="images/heroes/captainmarvel.jpg" alt="captainmarvel" width="100">
+    <img src="images/heroes/ironman.jpg" alt="ironman" width="100">
+    <img src="images/heroes/rajani.jpg" alt="rajani" width="100">
+    <img src="images/heroes/batman.jpg" alt="batman" width="99">
+    <img src="images/heroes/scarletwitch.jpg" alt="scarletwitch" width="100">
+    <img src="images/heroes/spiderman.jpg" alt="spiderman" width="100">
+</body>
+</html>

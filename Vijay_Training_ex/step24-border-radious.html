@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Backroynd shadow</title>
+    <script src="lib/modernizr.js"></script>
+    <style>
+        /*https://modernizr.com/*/
+    .box
+    {
+    width: 200px;
+    height: 200px;
+    background-color:bisque;
+    margin: 50px auto;
+    background-color: coral;
+
+    }
+    .box
+    {
+border-radius: 50%;  
+    }
+    /*in older browser border radious is not supported so we are follwing ohter way to display useing
+     modernizr
+     modernizer is like feature detecter
+
+     weather the style supported or not
+     */
+    .no-borderradius .box
+    {
+        background-color: aqua;
+        background-image: url("images/reddy.png");
+    }
+    </style>
+</head>
+<script>
+     /*in older browser border radious is not supported so we are follwing ohter way to display useing
+     modernizr*/
+if(Modernizr.borderradius)
+{
+alert("Its Supprorting")
+}
+else{
+alert("not supporting");
+}
+</script>
+<body>
+    <div class="box">
+        
+    </div>
+</body>
+</html>
